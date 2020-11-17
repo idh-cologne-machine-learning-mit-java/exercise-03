@@ -1,6 +1,6 @@
 # Exercise 3: Shared Task
 
-In this exercise, you will make first experiments with Weka. To this end, you'll find a dataset in the form of an ARFF file in this repository. The dataset consists of an annotated part of the Leiden des jungen Werther, by J.W.v. Goethe. Annotated are entity references, i.e., mentions of characters, locations (and very few others). In NLP-terms, this is situated in between named entity recognition (because NP mentions are also annotated) and coreference resolution (because pronouns are not annotated). 
+In this exercise, you will make first experiments with Weka. To this end, you'll find a dataset in the form of an ARFF file in this repository (and you'll need to install Weka from [here](https://www.cs.waikato.ac.nz/ml/weka/index.html)). The dataset consists of an annotated part of the Leiden des jungen Werther, by J.W.v. Goethe. Annotated are entity references, i.e., mentions of characters, locations (and very few others). In NLP-terms, this is situated in between named entity recognition (because NP mentions are also annotated) and coreference resolution (because pronouns are not annotated). 
 
 The data set you've been given can be used as a training data set. A second data set (another part of the same text) will be used as a withheld test set (to be evaluated against next week). These are the basic ingredients of a shared task. Think of the unknown test set as the "real world" in which our models are expected to work.
 
