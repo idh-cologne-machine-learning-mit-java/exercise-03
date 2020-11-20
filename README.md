@@ -19,6 +19,15 @@ Most classifiers have parameters that you can set (so called hyper-parameters, b
 ## Submission and Evaluation
 On November 24, 11:55, I will push the test data to the repository. In next week's session, you will then pull the test data via git, and apply your model (via Experimenter > Classify > Test options) to this new data set. We will then collect performance scores from all partipants during the session -- and discuss all upcoming issues and questions. 
 
+## Hints and Tips (added Nov. 20)
+
+This task and data set provides a few challenges, some technical and some conceptual:
+
+1. Strings: As we have discussed, many features in the data set are string values. And you may have noticed that many algorithms cannot really deal with string features. You will need to deal with these by either a) convert string features into nominal ones (using the filter `weka.filters.unsupervised.attribute.StringToNominal`) or b) convert some or all string features into word vectors (using `weka.filters.unsupervised.StringToWordVector`, which yields many more new features, see documentation for details).
+2. Many words (and subsequently, nominal feature values) appear only once or twice. It might be a good idea to remove those. There is, of course, a filter for that.
+3. Skewed data set: The data set is highly skewed, i.e., there are not many positive instances, but a lot of negative ones. This is a regular problem for NLP, because many interesting phenomena are rare. There are different strategies to deal with that, one of them is to oversample the unterrepresented classes by just duplicating instances until an equal representation in the training data is reached.
+4. If you need to read up on the BIO scheme, this [Wikipedia page](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)) has you covered. I mentioned it briefly while talking about the exercise, but maybe it was to fast.
+
 # Additional material
 
 - You can find an in-depth description of the annotation process [here](https://doi.org/10.1515/9783110693973-010).
