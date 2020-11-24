@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.BayesNet -- -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     entities-weka.filters.unsupervised.attribute.Remove-R3-6,8-25,28-35,37-47-weka.filters.unsupervised.attribute.StringToNominal-Rfirst-last-weka.filters.unsupervised.instance.RemoveDuplicates
+Instances:    8469
+Attributes:   7
+              word
+              pos
+              pos_first_character
+              next_pos
+              previous_pos
+              capitalized
+              class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+word(3056): class 
+pos(50): class 
+pos_first_character(10): class 
+next_pos(50): class 
+previous_pos(50): class 
+capitalized(2): class 
+class(7): 
+LogScore Bayes: -163478.8529314934
+LogScore BDeu: -439171.24924017495
+LogScore MDL: -349602.6408277839
+LogScore ENTROPY: -247900.97485100068
+LogScore AIC: -270390.97485100065
+
+Attribute mappings:
+
+Model attributes               	    Incoming attributes
+-------------------------------	    ----------------
+(nominal) word                 	--> 1 (nominal) word
+(nominal) pos                  	--> 2 (nominal) pos
+(nominal) pos_first_character  	--> 3 (nominal) pos_first_character
+(nominal) next_pos             	--> 4 (nominal) next_pos
+(nominal) previous_pos         	--> 5 (nominal) previous_pos
+(nominal) capitalized          	--> 6 (nominal) capitalized
+(nominal) class                	--> 7 (nominal) class
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.44 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       14773               77.4226 %
+Incorrectly Classified Instances      4308               22.5774 %
+Kappa statistic                          0.2744
+Mean absolute error                      0.0663
+Root mean squared error                  0.2053
+Relative absolute error                 98.94   %
+Root relative squared error            113.9592 %
+Total Number of Instances            19081     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,828    0,398    0,937      0,828    0,879      0,339    0,820     0,967     O
+                 0,521    0,036    0,295      0,521    0,377      0,369    0,914     0,277     B-EntityPER
+                 0,449    0,118    0,179      0,449    0,256      0,219    0,773     0,278     I-EntityPER
+                 0,208    0,007    0,241      0,208    0,223      0,217    0,920     0,166     B-EntityLOC
+                 0,261    0,024    0,243      0,261    0,252      0,229    0,825     0,244     I-EntityLOC
+                 0,000    0,000    0,000      0,000    0,000      -0,000   0,603     0,001     B-EntityWRK
+                 0,000    0,000    0,000      0,000    0,000      -0,001   0,670     0,003     I-EntityWRK
+Weighted Avg.    0,774    0,357    0,848      0,774    0,804      0,328    0,821     0,879     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g   <-- classified as
+ 13848   508  1868    99   394     3     5 |     a = O
+   177   279    58    16     5     1     0 |     b = B-EntityPER
+   489    41   463     6    32     0     0 |     c = I-EntityPER
+    48    86    11    41    11     0     0 |     d = B-EntityLOC
+   200    21   174     7   142     0     0 |     e = I-EntityLOC
+     7     8     1     0     0     0     0 |     f = B-EntityWRK
+    16     2    12     1     1     0     0 |     g = I-EntityWRK
