@@ -28,6 +28,22 @@ This task and data set provides a few challenges, some technical and some concep
 3. Skewed data set: The data set is highly skewed, i.e., there are not many positive instances, but a lot of negative ones. This is a regular problem for NLP, because many interesting phenomena are rare. There are different strategies to deal with that, one of them is to oversample the unterrepresented classes by just duplicating instances until an equal representation in the training data is reached.
 4. If you need to read up on the BIO scheme, this [Wikipedia page](https://en.wikipedia.org/wiki/Inside–outside–beginning_(tagging)) has you covered. I mentioned it briefly while talking about the exercise, but maybe it was to fast.
 
+## Evaluation
+- You need lists of
+   - the filter steps you selected
+   - the attributes you removed
+   - the classifier (settings) that work best
+- Update your repository
+- Open the file \texttt{test.arff} using the Explorer
+  - Apply apply all filter steps
+  - Remove the attributes you selected
+  - Save the file  \texttt{test.arff} under a new name
+- Load \texttt{data.arff} and apply preprocessing steps (again)
+- Switch to the classify tab and load the modified test file
+- Select the classifier `weka.classifiers.misc.InputMappedClassifier`. Click in its option window and select the classifier you want to use, with its properties
+- Run the classification -- copy/paste the mean f-score results in the discord chat
+- Commit the entire classifier output into a plain text file with your UzK username (on the main branch) -- this can be done later
+
 # Additional material
 
 - You can find an in-depth description of the annotation process [here](https://doi.org/10.1515/9783110693973-010).
