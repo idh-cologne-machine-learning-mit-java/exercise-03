@@ -1,0 +1,151 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.rules.ZeroR
+Relation:     entities-weka.filters.unsupervised.attribute.StringToNominal-Rlast
+Instances:    12822
+Attributes:   48
+              word
+              pos
+              surface
+              surface_backwards
+              surface_every_second
+              word_length
+              pos_first_character
+              lemma
+              lemma_backwards
+              lemma_every_second
+              segment_id
+              sent_id
+              word_id
+              next_word
+              next_verb_in_sent
+              next_verb_in_sent_distance
+              previous_verb_in_sent
+              previous_verb_in_sent_distance
+              next_complete_verb_in_sent
+              next_complete_verb_in_sent_distance
+              previous_complete_verb_in_sent
+              previous_complete_verb_in_sent_distance
+              previous_word
+              next_lemma
+              previous_lemma
+              next_pos
+              previous_pos
+              find_word_in_sentence74
+              contains_dot
+              contains_dash
+              only_vowels
+              only_non_vowels
+              sent_length
+              more_than_5_chars
+              word_is_ascii
+              capitalized
+              previous_word_capitalized
+              next_word_capitalized
+              fifth_word
+              all_upper_case
+              previous_word_all_upper_case
+              next_word_all_upper_case
+              suffix
+              suffix_2
+              suffix_3
+              all_digits
+              find_Mensch
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+ZeroR predicts class value: O
+Attribute mappings:
+
+Model attributes                                   	    Incoming attributes
+---------------------------------------------------	    ----------------
+(string) word                                      	--> 1 (string) word
+(string) pos                                       	--> 2 (string) pos
+(string) surface                                   	--> 3 (string) surface
+(string) surface_backwards                         	--> 4 (string) surface_backwards
+(string) surface_every_second                      	--> 5 (string) surface_every_second
+(numeric) word_length                              	--> 6 (numeric) word_length
+(string) pos_first_character                       	--> 7 (string) pos_first_character
+(string) lemma                                     	--> 8 (string) lemma
+(string) lemma_backwards                           	--> 9 (string) lemma_backwards
+(string) lemma_every_second                        	--> 10 (string) lemma_every_second
+(string) segment_id                                	--> 11 (string) segment_id
+(numeric) sent_id                                  	--> 12 (numeric) sent_id
+(numeric) word_id                                  	--> 13 (numeric) word_id
+(string) next_word                                 	--> 14 (string) next_word
+(string) next_verb_in_sent                         	--> 15 (string) next_verb_in_sent
+(string) next_verb_in_sent_distance                	--> 16 (string) next_verb_in_sent_distance
+(string) previous_verb_in_sent                     	--> 17 (string) previous_verb_in_sent
+(string) previous_verb_in_sent_distance            	--> 18 (string) previous_verb_in_sent_distance
+(string) next_complete_verb_in_sent                	--> 19 (string) next_complete_verb_in_sent
+(string) next_complete_verb_in_sent_distance       	--> 20 (string) next_complete_verb_in_sent_distance
+(string) previous_complete_verb_in_sent            	--> 21 (string) previous_complete_verb_in_sent
+(string) previous_complete_verb_in_sent_distance   	--> 22 (string) previous_complete_verb_in_sent_distance
+(string) previous_word                             	--> 23 (string) previous_word
+(string) next_lemma                                	--> 24 (string) next_lemma
+(string) previous_lemma                            	--> 25 (string) previous_lemma
+(string) next_pos                                  	--> 26 (string) next_pos
+(string) previous_pos                              	--> 27 (string) previous_pos
+(nominal) find_word_in_sentence74                  	--> 28 (nominal) find_word_in_sentence74
+(nominal) contains_dot                             	--> 29 (nominal) contains_dot
+(nominal) contains_dash                            	--> 30 (nominal) contains_dash
+(string) only_vowels                               	--> 31 (string) only_vowels
+(string) only_non_vowels                           	--> 32 (string) only_non_vowels
+(numeric) sent_length                              	--> 33 (numeric) sent_length
+(nominal) more_than_5_chars                        	--> 34 (nominal) more_than_5_chars
+(nominal) word_is_ascii                            	--> 35 (nominal) word_is_ascii
+(nominal) capitalized                              	--> 36 (nominal) capitalized
+(nominal) previous_word_capitalized                	--> 37 (nominal) previous_word_capitalized
+(string) next_word_capitalized                     	--> 38 (string) next_word_capitalized
+(string) fifth_word                                	--> 39 (string) fifth_word
+(nominal) all_upper_case                           	--> 40 (nominal) all_upper_case
+(nominal) previous_word_all_upper_case             	--> 41 (nominal) previous_word_all_upper_case
+(string) next_word_all_upper_case                  	--> 42 (string) next_word_all_upper_case
+(nominal) suffix                                   	--> 43 (nominal) suffix
+(string) suffix_2                                  	--> 44 (string) suffix_2
+(string) suffix_3                                  	--> 45 (string) suffix_3
+(nominal) all_digits                               	--> 46 (nominal) all_digits
+(string) find_Mensch                               	--> 47 (string) find_Mensch
+(nominal) class                                    	--> 48 (nominal) class
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       11490               89.6116 %
+Incorrectly Classified Instances      1332               10.3884 %
+Kappa statistic                          0     
+Mean absolute error                      0.0555
+Root mean squared error                  0.1663
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances            12822     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,896      1,000    0,945      ?        0,499     0,896     O
+                 0,000    0,000    ?          0,000    ?          ?        0,499     0,026     B-EntityPER
+                 0,000    0,000    ?          0,000    ?          ?        0,499     0,047     I-EntityPER
+                 0,000    0,000    ?          0,000    ?          ?        0,497     0,011     B-EntityLOC
+                 0,000    0,000    ?          0,000    ?          ?        0,496     0,018     I-EntityLOC
+                 0,000    0,000    ?          0,000    ?          ?        0,438     0,001     B-EntityWRK
+                 0,000    0,000    ?          0,000    ?          ?        0,425     0,001     I-EntityWRK
+Weighted Avg.    0,896    0,896    ?          0,896    ?          ?        0,499     0,806     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g   <-- classified as
+ 11490     0     0     0     0     0     0 |     a = O
+   329     0     0     0     0     0     0 |     b = B-EntityPER
+   599     0     0     0     0     0     0 |     c = I-EntityPER
+   139     0     0     0     0     0     0 |     d = B-EntityLOC
+   232     0     0     0     0     0     0 |     e = I-EntityLOC
+    17     0     0     0     0     0     0 |     f = B-EntityWRK
+    16     0     0     0     0     0     0 |     g = I-EntityWRK
