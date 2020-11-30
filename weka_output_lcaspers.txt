@@ -1,0 +1,146 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.NaiveBayesMultinomialText -- -P 0 -M 3.0 -norm 1.0 -lnorm 2.0 -stopwords-handler weka.core.stopwords.Null -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"" -stemmer weka.core.stemmers.NullStemmer
+Relation:     entities-weka.filters.unsupervised.attribute.StringToNominal-Rlast-weka.filters.unsupervised.attribute.StringToNominal-Rfirst-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R3-6,8-25,28-35,37-47
+Instances:    34851
+Attributes:   7
+              word
+              pos
+              pos_first_character
+              next_pos
+              previous_pos
+              capitalized
+              class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Dictionary size: 58
+
+The independent frequency of a class
+--------------------------------------
+O	31611.0
+B-EntityPER	897.0
+I-EntityPER	1282.0
+B-EntityLOC	387.0
+I-EntityLOC	630.0
+B-EntityWRK	17.0
+I-EntityWRK	34.0
+
+The frequency of a word given the class
+-----------------------------------------
+          O	B-EntityPER	I-EntityPER	B-EntityLOC	I-EntityLOC	B-EntityWRK	I-EntityWRK	
+       11.0	<laplace=1>	        5.0	        3.0	        7.0	<laplace=1>	<laplace=1>	XY
+      348.0	       13.0	       13.0	        6.0	        7.0	<laplace=1>	<laplace=1>	PDAT
+     2240.0	       21.0	       54.0	       14.0	        6.0	<laplace=1>	<laplace=1>	ADJD
+     2682.0	      118.0	      291.0	       70.0	      177.0	        3.0	        6.0	ADJA
+      322.0	<laplace=1>	        8.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PAV
+     1580.0	        7.0	       53.0	        4.0	       16.0	<laplace=1>	<laplace=1>	PRF
+     2384.0	      180.0	      223.0	       43.0	       55.0	<laplace=1>	<laplace=1>	PPOSAT
+     8331.0	       50.0	       66.0	       20.0	       13.0	        4.0	<laplace=1>	PPER
+      144.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	VVIMP
+     1206.0	        3.0	       28.0	<laplace=1>	        5.0	<laplace=1>	<laplace=1>	VMFIN
+      355.0	<laplace=1>	<laplace=1>	        3.0	        4.0	<laplace=1>	<laplace=1>	CARD
+     1028.0	        5.0	       20.0	        3.0	<laplace=1>	<laplace=1>	<laplace=1>	PTKNEG
+     4978.0	       40.0	      112.0	       22.0	       21.0	<laplace=1>	<laplace=1>	ADV
+     1960.0	       40.0	        4.0	        4.0	<laplace=1>	<laplace=1>	<laplace=1>	KOUS
+    14016.0	      318.0	      516.0	       35.0	      202.0	        4.0	       10.0	$
+      158.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PWS
+      581.0	       10.0	       31.0	       52.0	       64.0	<laplace=1>	        7.0	APPRART
+      768.0	      225.0	       75.0	       27.0	       39.0	        5.0	        4.0	NE
+       50.0	<laplace=1>	<laplace=1>	<laplace=1>	        3.0	<laplace=1>	<laplace=1>	APZR
+     3339.0	       55.0	       71.0	        5.0	       14.0	        4.0	        3.0	VAFIN
+       38.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PRELAT
+    11299.0	      612.0	      927.0	      304.0	      539.0	       12.0	       29.0	NN
+      454.0	       11.0	        5.0	<laplace=1>	        5.0	<laplace=1>	<laplace=1>	KOKOM
+     7405.0	      337.0	      278.0	      285.0	      144.0	        9.0	       11.0	A
+      122.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	C
+     5297.0	      311.0	      442.0	      230.0	      336.0	        9.0	       15.0	ART
+      137.0	<laplace=1>	       10.0	<laplace=1>	        3.0	<laplace=1>	<laplace=1>	VAPP
+      866.0	        7.0	       11.0	        3.0	       30.0	<laplace=1>	<laplace=1>	PTKVZ
+        9.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	F
+     1100.0	        8.0	      156.0	        4.0	       28.0	<laplace=1>	        4.0	PRELS
+       24.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	FM
+      918.0	       10.0	       42.0	<laplace=1>	        5.0	<laplace=1>	<laplace=1>	PIAT
+       46.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	I
+       79.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	VMINF
+        3.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	TRUNC
+     2062.0	<laplace=1>	       11.0	<laplace=1>	        3.0	<laplace=1>	<laplace=1>	K
+      808.0	        4.0	       24.0	<laplace=1>	        9.0	<laplace=1>	<laplace=1>	PTKZU
+     3810.0	      367.0	      646.0	       42.0	      406.0	        6.0	       20.0	N
+     6754.0	      114.0	      144.0	       39.0	       66.0	<laplace=1>	        3.0	VVFIN
+     6904.0	      188.0	      141.0	       51.0	       30.0	        3.0	<laplace=1>	P
+     5529.0	        6.0	       86.0	       10.0	       20.0	<laplace=1>	        3.0	V
+        5.0	<laplace=1>	        3.0	<laplace=1>	        6.0	<laplace=1>	<laplace=1>	X
+      247.0	<laplace=1>	<laplace=1>	<laplace=1>	       19.0	<laplace=1>	<laplace=1>	PWAV
+      133.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	KOUI
+      413.0	        3.0	        3.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PDS
+      169.0	<laplace=1>	        3.0	<laplace=1>	        4.0	<laplace=1>	<laplace=1>	VVIZU
+       16.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PPOSS
+     2154.0	        3.0	       54.0	        4.0	       17.0	<laplace=1>	<laplace=1>	VVINF
+       57.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	PTKANT
+     1499.0	        8.0	       57.0	<laplace=1>	       38.0	<laplace=1>	        5.0	VVPP
+     3251.0	       57.0	       43.0	       17.0	       26.0	        3.0	<laplace=1>	KON
+      366.0	<laplace=1>	       13.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	VAINF
+     5011.0	      178.0	      177.0	      215.0	       66.0	        3.0	       10.0	APPR
+       38.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	APPO
+      951.0	        9.0	       32.0	        3.0	<laplace=1>	<laplace=1>	<laplace=1>	PIS
+       13.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	VAIMP
+      113.0	        4.0	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	<laplace=1>	ITJ
+       38.0	<laplace=1>	<laplace=1>	<laplace=1>	        5.0	<laplace=1>	<laplace=1>	PTKA
+
+Attribute mappings:
+
+Model attributes               	    Incoming attributes
+-------------------------------	    ----------------
+(nominal) word                 	--> 1 (nominal) word
+(string) pos                   	--> 2 (string) pos
+(string) pos_first_character   	--> 3 (string) pos_first_character
+(string) next_pos              	--> 4 (string) next_pos
+(string) previous_pos          	--> 5 (string) previous_pos
+(nominal) capitalized          	--> 6 (nominal) capitalized
+(nominal) class                	--> 7 (nominal) class
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.7 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       11358               88.5821 %
+Incorrectly Classified Instances      1464               11.4179 %
+Kappa statistic                          0.0547
+Mean absolute error                      0.0569
+Root mean squared error                  0.1654
+Relative absolute error                107.9757 %
+Root relative squared error             99.3509 %
+Total Number of Instances            12822     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,986    0,938    0,901      0,986    0,941      0,106    0,829     0,976     O
+                 0,024    0,006    0,098      0,024    0,039      0,036    0,826     0,092     B-EntityPER
+                 0,018    0,003    0,224      0,018    0,034      0,052    0,823     0,166     I-EntityPER
+                 0,007    0,000    0,143      0,007    0,014      0,030    0,905     0,140     B-EntityLOC
+                 0,060    0,008    0,128      0,060    0,082      0,077    0,845     0,105     I-EntityLOC
+                 0,000    0,000    0,000      0,000    0,000      -0,000   0,724     0,003     B-EntityWRK
+                 0,000    0,000    ?          0,000    ?          ?        0,770     0,004     I-EntityWRK
+Weighted Avg.    0,886    0,841    ?          0,886    ?          ?        0,830     0,888     
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g   <-- classified as
+ 11324    38    37     6    83     2     0 |     a = O
+   321     8     0     0     0     0     0 |     b = B-EntityPER
+   552    24    11     0    12     0     0 |     c = I-EntityPER
+   137     1     0     1     0     0     0 |     d = B-EntityLOC
+   213     5     0     0    14     0     0 |     e = I-EntityLOC
+    14     3     0     0     0     0     0 |     f = B-EntityWRK
+    12     3     1     0     0     0     0 |     g = I-EntityWRK
+
