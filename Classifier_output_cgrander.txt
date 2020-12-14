@@ -1,0 +1,94 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.bayes.NaiveBayesMultinomialText -- -P 0 -M 2.0 -norm 1.0 -lnorm 2.0 -stopwords-handler weka.core.stopwords.Null -tokenizer "weka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"" -stemmer weka.core.stemmers.NullStemmer
+Relation:     entities-weka.filters.unsupervised.attribute.StringToNominal-Rfirst-last-weka.filters.unsupervised.attribute.Remove-R3-5-weka.filters.unsupervised.attribute.Remove-R5-7-weka.filters.unsupervised.attribute.Remove-R8-16-weka.filters.unsupervised.attribute.Remove-R13-weka.filters.unsupervised.attribute.Remove-R21-29,31-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.Remove-R7-8-weka.filters.unsupervised.attribute.Remove-R9-15-weka.filters.unsupervised.attribute.Remove-R10-weka.filters.unsupervised.instance.RemoveDuplicates
+Instances:    29007
+Attributes:   10
+              word
+              pos
+              word_length
+              pos_first_character
+              segment_id
+              previous_word
+              next_pos
+              previous_pos
+              capitalized
+              class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Dictionary size: 0
+
+The independent frequency of a class
+--------------------------------------
+O	26123.0
+B-EntityPER	722.0
+I-EntityPER	1190.0
+B-EntityLOC	325.0
+I-EntityLOC	603.0
+B-EntityWRK	17.0
+I-EntityWRK	34.0
+
+The frequency of a word given the class
+-----------------------------------------
+          O	B-EntityPER	I-EntityPER	B-EntityLOC	I-EntityLOC	B-EntityWRK	I-EntityWRK	
+
+Attribute mappings:
+
+Model attributes               	    Incoming attributes
+-------------------------------	    ----------------
+(nominal) word                 	--> 1 (nominal) word
+(nominal) pos                  	--> 2 (nominal) pos
+(numeric) word_length          	--> 3 (numeric) word_length
+(nominal) pos_first_character  	--> 4 (nominal) pos_first_character
+(nominal) segment_id           	--> 5 (nominal) segment_id
+(nominal) previous_word        	--> 6 (nominal) previous_word
+(nominal) next_pos             	--> 7 (nominal) next_pos
+(nominal) previous_pos         	--> 8 (nominal) previous_pos
+(nominal) capitalized          	--> 9 (nominal) capitalized
+(nominal) class                	--> 10 (nominal) class
+
+
+Time taken to build model: 0.04 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.59 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        9853               88.7578 %
+Incorrectly Classified Instances      1248               11.2422 %
+Kappa statistic                          0     
+Mean absolute error                      0.0564
+Root mean squared error                  0.1726
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances            11101     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,888      1,000    0,940      ?        0,500     0,888     O
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,026     B-EntityPER
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,052     I-EntityPER
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,011     B-EntityLOC
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,020     I-EntityLOC
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,001     B-EntityWRK
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,001     I-EntityWRK
+Weighted Avg.    0,888    0,888    ?          0,888    ?          ?        0,500     0,792     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g   <-- classified as
+ 9853    0    0    0    0    0    0 |    a = O
+  290    0    0    0    0    0    0 |    b = B-EntityPER
+  582    0    0    0    0    0    0 |    c = I-EntityPER
+  117    0    0    0    0    0    0 |    d = B-EntityLOC
+  227    0    0    0    0    0    0 |    e = I-EntityLOC
+   16    0    0    0    0    0    0 |    f = B-EntityWRK
+   16    0    0    0    0    0    0 |    g = I-EntityWRK
+
